@@ -22,44 +22,77 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
-    <div class="container">
-      <!-- 0000 0000 0000 0000
-    Jane Appleseed
-    00/00
+    <main class="container">
+        <div class="bg-main-container">
+          <img
+            src="images/bg-main-mobile.png"
+            width="100%"
+            alt="#"
+            class="display-lg-none"
+          />
+          <img
+            src="images/bg-main-desktop.png"
+            alt="#"
+            class="display-sm-none"
+          />
 
-    000 -->
-      <div class="bg-area">
-        <img src="images/bg-main-mobile.png" width="100%" alt="#" class="display-lg-none"/>
-        <img src="images/bg-main-desktop.png" alt="#" class="display-sm-none"/>
+          <div class="bg-card-back-container">
+            <img
+              src="images/bg-card-back.png"
+              alt="card-back"
+              class="bg-image bg-card-back"
+            />
+            <p class="card-code card-text-small card-text">000</p>
+          </div>
 
-        <img src="images/bg-card-back.png" alt="card-back" class="bg-image bg-image--back">
-        <img src="images/bg-card-front.png" alt="card-front " class="bg-image bg-image--front">
-      </div>
+          <div class="bg-card-front-container">
+            <img
+              src="images/bg-card-front.png"
+              alt="card-front"
+              class="bg-card-front"
+            />
+            <img src="images/card-logo.svg" alt="card-logo" class="card-logo" />
+            <p class="card-number card-text">0000 0000 0000 0000</p>
+            <p class="card-name card-text card-text-small">Jane Appleseed</p>
+            <p class="date card-text card-text-small">00/00</p>
+          </div>
+        </div>
+      
+
       <div class="form-container">
         <form action="#">
-          <p class="card-item-description">Cardholder Name</p>
+          <label for="username" class="card-item-description"
+            >Cardholder Name</label
+          >
           <input
             class="card-item"
             type="text"
             name="username"
+            id="username"
             placeholder="e.g. Jane Appleseed"
           />
 
-          <p class="card-item-description">Card Number</p>
+          <label for="cardnumber" class="card-item-description"
+            >Card Number</label
+          >
           <input
             class="card-item"
             type="text"
             name="cardnumber"
+            id="cardnumber"
             placeholder="e.g. 1234 5678 9123 0000"
           />
 
           <div class="card-item--bottom">
             <div>
-              <p class="card-item-description">Exp. Date (MM/YY)</p>
+              <label for="date" class="card-item-description"
+                >Exp. Date (MM/YY)</label
+              >
               <input
                 class="card-item card-item--small"
                 type="text"
                 placeholder="MM"
+                id="date"
               />
 
               <input
@@ -70,11 +103,12 @@
             </div>
 
             <div class="cvc">
-              <p class="card-item-description">CVC</p>
+              <label for="cvc" class="card-item-description">CVC</label>
               <input
                 class="card-item card-item--medium"
                 type="text"
                 placeholder="e.g. 123"
+                id="cvc"
               />
             </div>
           </div>
@@ -84,7 +118,7 @@
           </button>
         </form>
       </div>
-    </div>
+    </main>
 
     <!-- Completed state start -->
 
@@ -92,7 +126,6 @@
   We've added your card details
   Continue -->
 
-    
     <script type="module" src="/main.js"></script>
   </body>
 </html>

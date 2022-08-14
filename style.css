@@ -105,6 +105,16 @@ svg {
 
 /* general styling */
 
+.card-text {
+  color: var(--clr-neutral-100);
+  letter-spacing: 1px;
+}
+
+.card-text-small {
+  font-size: 0.6rem;
+
+}
+
 body {
   font-family: var(--ff-primary);
 }
@@ -112,6 +122,8 @@ body {
 /* .card-item {
     
 } */
+
+
 
 input {
   margin-top: 0.3rem;
@@ -199,6 +211,16 @@ input:focus {
   margin: auto;
 }
 
+/* @media (min-width: 48em) {
+  .container {
+    width: 375px;
+    margin: auto;
+    align-items: center;
+    border: 1px solid red;
+
+  }
+} */
+
 @media (max-width: 49.938em) {
   .display-sm-none {
     display: none;
@@ -212,7 +234,7 @@ input:focus {
 
   .display-sm-none {
     height: 100vh;
-    width: 30vw;
+    width: 35vw;
     position: relative;
   }
 
@@ -220,34 +242,86 @@ input:focus {
     display: flex;
     height: 100vh;
   }
-
-  .bg-image--front {
-    top: 0;
-  }
 }
+
 
 /* bg image */
 
-.bg-area {
+.bg-main-container{
   position: relative;
   margin-bottom: 3.5rem;
+  background-color: blue;    /* remove */
 }
 .bg-image {
-  width: 75%;
+  width: 3rem;
 }
 
-.bg-image--back {
+
+
+.bg-card-back-container {
   z-index: 1000;
   position: absolute;
-  top: 30px;
+  bottom: 50px;
   right: 15px;
+  /* background-color: red; */
+  max-width: 20rem;
+
 }
 
-.bg-image--front {
+.bg-card-back {
+  position: relative;
+  width: fit-content;
+  height: 9.5rem
+}
+
+.card-code {
+  position: absolute;
+  right: 35px;
+  top: 4.2rem
+}
+
+.bg-card-front-container {
   z-index: 2000;
   position: absolute;
-  top: 117px;
+  /* top: 117px; */
+  bottom: -55px;
   left: 15px;
-  box-shadow: 0em 2em 5em -2.5em var(--clr-neutral-300);
   border-radius: 10px;
+  border: none;
+  max-width: 20rem;
+  /* box-shadow: 0em 2em 5em -2.5em var(--clr-neutral-300); */
+}
+
+.bg-card-front {
+  position: relative;
+  width: fit-content;
+  height: 9.5rem;
+}
+
+.card-number, .card-name, .date, .card-logo {
+  position: absolute;
+}
+
+.card-number {
+  bottom: 3rem;
+  left: 1rem;
+
+}
+
+.card-logo {
+  top: 10px;
+  height: 30px;
+  left: 1rem;
+  
+}
+
+.card-name {
+  bottom: 1rem;
+  left: 1rem;
+  text-transform: uppercase;
+}
+
+.date {
+  right: 1rem;
+  bottom: 1rem;
 }
