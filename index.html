@@ -1,51 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive card details form</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <div class="container">
+      <!-- 0000 0000 0000 0000
+    Jane Appleseed
+    00/00
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    000 -->
+      <div class="bg-area">
+        <img src="images/bg-main-mobile.png" width="100%" alt="#" class="display-lg-none"/>
+        <img src="images/bg-main-desktop.png" alt="#" class="display-sm-none"/>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+        <img src="images/bg-card-back.png" alt="card-back" class="bg-image bg-image--back">
+        <img src="images/bg-card-front.png" alt="card-front " class="bg-image bg-image--front">
+      </div>
+      <div class="form-container">
+        <form action="#">
+          <p class="card-item-description">Cardholder Name</p>
+          <input
+            class="card-item"
+            type="text"
+            name="username"
+            placeholder="e.g. Jane Appleseed"
+          />
 
-  000
+          <p class="card-item-description">Card Number</p>
+          <input
+            class="card-item"
+            type="text"
+            name="cardnumber"
+            placeholder="e.g. 1234 5678 9123 0000"
+          />
 
-  Cardholder Name
-  e.g. Jane Appleseed
+          <div class="card-item--bottom">
+            <div>
+              <p class="card-item-description">Exp. Date (MM/YY)</p>
+              <input
+                class="card-item card-item--small"
+                type="text"
+                placeholder="MM"
+              />
 
-  Card Number
-  e.g. 1234 5678 9123 0000
+              <input
+                class="card-item card-item--small"
+                type="text"
+                placeholder="YY"
+              />
+            </div>
 
-  Exp. Date (MM/YY)
-  MM
-  YY
+            <div class="cvc">
+              <p class="card-item-description">CVC</p>
+              <input
+                class="card-item card-item--medium"
+                type="text"
+                placeholder="e.g. 123"
+              />
+            </div>
+          </div>
 
-  CVC
-  e.g. 123
+          <button type="submit" class="button text-neutral-100 .bg-primary-900">
+            Confirm
+          </button>
+        </form>
+      </div>
+    </div>
 
-  Confirm
+    <!-- Completed state start -->
 
-  <!-- Completed state start -->
-
-  Thank you!
+    <!-- Thank you!
   We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  Continue -->
+
+    
+    <script type="module" src="/main.js"></script>
+  </body>
 </html>
